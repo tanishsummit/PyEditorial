@@ -8,6 +8,7 @@ RUN pip install -r requirements.txt
 
 # migrations
 RUN python manage.py makemigrations content
-RUN python manage.py migrate
 # static
 RUN python manage.py collectstatic --noinput
+
+CMD ["./prod_start.sh"]
