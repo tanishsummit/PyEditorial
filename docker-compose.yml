@@ -35,6 +35,7 @@ services:
     volumes:
       - local_postgres_data:/var/lib/postgresql/data:Z
       - local_postgres_data_backups:/backups:z
+      - ./postgresql.conf:/var/lib/postgresql/data/postgresql.conf:z
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
